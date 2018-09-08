@@ -29,18 +29,7 @@ module.exports = {
       });
     }
     readContent(function(err, content) {
-      // console.log(content);
       return content;
     });
-
-    //   let fileContent = "";
-    //  return {
-    //    fs.readFile(fileName, (err, data) => {
-    //    if (err) {
-    //      throw err;
-    //    }
-    //    console.log("data", data);
-    //    fileContent = data;
-    //  })};
   }
 };

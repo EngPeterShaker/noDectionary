@@ -27,40 +27,27 @@ fs.exists(FILENAME, exists => {
 
 switch (arg_array[0]) {
   case "add":
-    text = "Today is add";
-    // addFn(arg_array[1], arg_array[2]);
+    // text = "Today is add";
     setDict.setFileData(FILENAME, arg_array[0], arg_array[1], arg_array[2]); //todo : spread
     break;
   case "list":
-    text = "Today is list";
+    // text = "Today is list";
     getDict.getFileData(FILENAME, arg_array[0]);
     break;
   case "get":
-    text = "Today is get";
+    // text = "Today is get";
     getDict.getFileData(FILENAME, arg_array[0], arg_array[1]);
     break;
   case "remove":
-    text = "Today is remove";
+    // text = "Today is remove";
     setDict.setFileData(FILENAME, arg_array[0], arg_array[1]); //todo : spread
 
     break;
   case "clear":
-    text = "Today is clear";
+    // text = "Today is clear";
+    setDict.setFileData(FILENAME, arg_array[0]); //todo : spread
     break;
   default:
     text = "Looking forward to a newsss trial";
 }
-console.log(text);
-
-function addFn(mykey, myvalue) {
-  console.log("here");
-  // var mykey = key.toString();
-  //var myvalue = value.toString()
-  let dict = {};
-  //let ifFileExists = false;
-
-  getDict.getFileData(FILENAME);
-
-
-  setDict.setFileData(FILENAME, dict);
-}
+console.log(`Successful ${arg_array[0]} process`);
